@@ -18,14 +18,15 @@ kitchen = {
     "name": "kitchen",
 
     "description":
-    """You walk through the rusted door. The smell of rotting food and rats 
-engulfs the room. To the north is the backgarden, to the east of 
-me i can feel a chill of the freezer. To the west looks to be the dining 
+    """You walk through the rusted door. The smell of rotting food
+and rats engulfs the room. Sitting on one of the work tops is a
+torch. To the north is the backgarden, to the east of me i can
+feel a chill of the freezer. To the west looks to be the dining
 room. If i go south i will end up at the entrance hall.""",
 
     "exits":{"north":"Backyard", "east":"Freezer", "west":"Dining", "south": "Hall"}, 
 
-    "items": []
+    "items": [item_torch]
 }
 
 freezer = {
@@ -78,7 +79,7 @@ civilisation.""",
    
     "exits":{"north":"Backyard","east":"Kitchen"},
 
-    "items": []
+    "items": [item_glass]
 }
 
 backyard = {

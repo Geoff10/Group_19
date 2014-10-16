@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-from player import *
 from items import *
 from gameparser import *
 from map import rooms
 from missions import *
+from player import *
 import player
 
 
@@ -131,6 +131,9 @@ def print_room(room):
     print("")
     print_room_items(room)
 
+def print_fear(fear):
+    print("Your fear level is " + str(fear))
+    print()
 
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
@@ -256,9 +259,14 @@ def execute_take(item_id):
     there is no such item in the room, this function prints
     "You cannot take that."
     """
+
     if is_item_in_room(item_id,player.current_room):
-        inventory.append(items[item_id])
-        player.current_room["items"].remove(items[item_id])
+        if inv_weight_limit(item_id):
+            inventory.append(items[item_id])
+            player.current_room["items"].remove(items[item_id])
+        else:
+            print("You cannot pick up this item, you are carrying too much")
+            input("Hit enter.")
     
 
 def execute_drop(item_id):
@@ -366,6 +374,7 @@ def main():
             # Display game status (room description, inventory etc.)
             print_room(player.current_room)
             print_inventory_items(inventory)
+            print_fear(player.fear)
 
             # Show the menu with possible actions and ask the player
             command = menu(player.current_room["exits"], player.current_room["items"], inventory)
@@ -378,11 +387,14 @@ def main():
             mission2()
             mission3()
             miss_com()
+            player.fear = player.fear + 1
+            player.fear_level()
         elif game.won == True:
             print("")
             print("You have escaped and won the game!!!")
             print("")
             print("Thank you for playing the game")
+            input("Hit enter.")
             quit()
         elif game.won == False:
             print("Your fear level got too high!!")
@@ -390,6 +402,8 @@ def main():
             print("You faint!")
             print("")
             print("You have lost!")
+            input("Hit enter.")
+            quit()
            
 # Are we being run as a script? If so, run main().
 # '__main__' is the name of the scope in which top-level code executes.
