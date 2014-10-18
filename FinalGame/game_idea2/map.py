@@ -107,7 +107,7 @@ backyard = {
 
     "description":
     """The back yard resembles a jungle. Overgrown and untended. Surrounding 
-the entire garden is a brickwall, far to high to climb over. The only 
+the entire garden is a brickwall, far too high to climb over. The only 
 light avaiable is that of the moon, illuminating the heaps of rubbish amongst 
 the plants. You wonder if there is anything of use? 
 
