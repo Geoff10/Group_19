@@ -12,8 +12,8 @@ mission = {
 
 def mission1():
     for i in garage["items"]:
-        if "battery" == i["id"]:
-            garage["items"].remove(items["battery"])
+        if "fuse" == i["id"]:
+            garage["items"].remove(items["fuse"])
             garage["description"] = """ The lights are now on, you can now see where you are going around
 the house. I wonder if there was anything in the freezer."""
             freezer["items"].append(items["pick"])
