@@ -71,5 +71,6 @@ items = {
     "key" : item_key,
     "pick" : item_pick,
     "money": item_money,
-    "torch": item_torch
+    "torch": item_torch,
+    "glass": item_glass
 }
