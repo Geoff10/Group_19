@@ -11,7 +11,7 @@ is the lounge. Looks like I need a key to escape this place.""",
 
     "exits": {"north": "Kitchen", "west":"Lounge"}, 
 
-    "items": [item_battery]
+    "items": [item_fuse]
 }
 
 kitchen = {
@@ -47,7 +47,7 @@ garage = {
 
     "description":
     """You are in the garage. An empty bleak room, there must be something around here.
-There seems to be a battery box in here. I wonder if i find a battery and get some light for 
+There seems to be a fuse box in here. I wonder if i find a fuse and get some light for 
 this dark house.""",
 
     "exits":{"north":"Backyard"},
