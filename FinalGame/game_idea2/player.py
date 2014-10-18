@@ -2,7 +2,7 @@ from items import *
 from map import rooms
 import game
 
-inventory = [item_money]
+inventory = [item_money, item_phone]
 
 # Start game at the reception
 current_room = rooms["Hall"]
@@ -21,5 +21,5 @@ def inv_weight_limit(item_id):
         return False
 
 def fear_level():
-    if fear > 18:
+    if fear > 25:
         game.won = False
