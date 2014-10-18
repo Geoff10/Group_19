@@ -1,10 +1,10 @@
-item_battery = {
-    "id": "battery",
+item_fuse = {
+    "id": "fuse",
 
-    "name": "the battery",
+    "name": "the fuse",
 
     "description":
-    """A small battery, could help me turn the lights on in this place.""",
+    """A small fuse, could help me turn the lights on in this place.""",
 
     "weight": "4"
 }
@@ -67,7 +67,7 @@ wine glass. It will be pretty useless, especially for drinking from.""",
 }
 
 items = {
-    "battery" : item_battery,
+    "fuse" : item_fuse,
     "key" : item_key,
     "pick" : item_pick,
     "money": item_money,
