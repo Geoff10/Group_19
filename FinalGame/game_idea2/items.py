@@ -6,7 +6,7 @@ item_fuse = {
     "description":
     """A small fuse, could help me turn the lights on in this place.""",
 
-    "weight": "2"
+    "weight": "4"
 }
 
 item_key = {
@@ -74,7 +74,7 @@ item_phone = {
     "description":
     """ A phone without signal, is there a point on holding onto this. """,
 
-    "weight": "1"
+    "weight": "2"
 }
 
 

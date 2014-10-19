@@ -21,5 +21,11 @@ def inv_weight_limit(item_id):
         return False
 
 def fear_level():
-    if fear > 25:
+    if fear > 35:
         game.won = False
+
+def inv_weight():
+    weight = 0
+    for i in inventory:
+        weight = float(weight) + float(i["weight"])
+    return weight

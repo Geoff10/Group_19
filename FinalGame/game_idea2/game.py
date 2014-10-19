@@ -60,9 +60,12 @@ def print_room(room):
     print(room["description"])
     print("")
     print_room_items(room)
+    print("Your inventory weight is " + str(int(inv_weight())) + "/5")
+    print("")
 
 def print_fear(fear):
-    print("Your fear level is " + str(fear) + "/25")
+    #Displays fear level
+    print("Your fear level is " + str(fear) + "/35")
     print("--------------------------------------------------------------------------------")
 
 def exit_leads_to(exits, direction):
@@ -115,12 +118,19 @@ def is_valid_exit(exits, chosen_exit):
     return chosen_exit in exits
 
 def is_item_in_room(item_id,room):
+    """This function checks that a chosen item (item_id) is present in the list of
+    items in the current room (room). It does this by going to the current room's dictionary
+    and scrolling through the entries in the items list one by one to see if the
+    chosen item is present."""
     for i in room["items"]:
         if item_id == i["id"]:
             return True
     return False
 
 def is_item_in_inventory(item_id,inventory):
+    """This function checks that a chosen item (item_id) is present in the players
+    inventory. It does this by scrolling through the entries in the items list one
+    by one to see if the chosen item is present."""
     for i in inventory:
         if item_id == i["id"]:
             return True
@@ -165,6 +175,8 @@ def execute_drop(item_id):
     pass
 
 def execute_examine(item_id):
+    """This function takes a chosen item and, given that it is in the player's
+    inventory, it prints the items description."""
     if is_item_in_inventory(item_id,player.inventory):
         print(item_id.upper())
         print(items[item_id]["description"])
@@ -178,9 +190,12 @@ def execute_command(command):
     execute_take, or execute_drop, supplying the second word as the argument.
 
     """
-    if command[0] == "go":
-        if len(command) > 1:
 
+    if command == []:
+        print("This makes no sense.")
+
+    elif command[0] == "go":
+        if len(command) > 1:
             execute_go(command[1])
         else:
             print("Go where?")
@@ -200,9 +215,11 @@ def execute_command(command):
     elif command[0] == "exit":
         quit()
 
+    #This command is for demo purposes only.
     elif command[0] == "demo":
         game.won = True
 
+    #This command is for demo purposes only.
     elif command[0] == "faint":
         game.won = False
 
@@ -211,7 +228,6 @@ def execute_command(command):
             execute_examine(command[1])
         else:
             print("Examine what?")
-
     else:
         print("This makes no sense.")
 
@@ -244,20 +260,27 @@ def move(exits, direction):
     return rooms[exits[direction]]
 
 def story():
+    """This function prints out the back ground story and introduction at the start
+    of the game"""
     story = { 
      "description":
      """You are driving home from work as usual at 11pm. 
 You are enjoying the newly released music and suddenly you 
 find yourself lost in a unknown area. You could not find your 
 way out but there is a house nearby, and you decide to ask 
-for help. As you walk inside, the door shuts and suddenly 
-lockes, you cannot seem to open it.
+for help. As you walk inside, the door shuts and locks suddenly,
+you cannot seem to open it.
 
-Your mission now is to try to find the key for 
-escaping the house.
-Remember the fear level increases and you will be terrified and never get out.
-You currently have a phone without signal and some cash.
+Your mission now is to try to find the key for escaping the
+house.
+Remember the fear level increases, if it reaches 25 you will get
+terrified and be trapped forever. You currently have a phone
+without signal and some cash.
  """}
+    print("------------------------------------------------------------")
+    print("")
+    print("")
+    print("")
     print(story["description"])
 
 
@@ -269,7 +292,7 @@ def main():
     # Main game loop
     while True:
         if game.won == "":
-            # Display game status (room description, inventory etc.)
+            #Display game status (room description, inventory etc.)
             print_room(player.current_room)
             print_inventory_items(inventory)
             print_fear(player.fear)
