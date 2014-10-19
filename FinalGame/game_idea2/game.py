@@ -266,7 +266,7 @@ def story():
      "description":
      """You are driving home from work as usual at 11pm. 
 You are enjoying the newly released music and suddenly you 
-find yourself lost in a unknown area. You could not find your 
+find yourself lost in an unknown area. You could not find your 
 way out but there is a house nearby, and you decide to ask 
 for help. As you walk inside, the door shuts and locks suddenly,
 you cannot seem to open it.
