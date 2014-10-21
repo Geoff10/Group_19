@@ -9,6 +9,7 @@ current_room = rooms["Hall"]
 
 fear = 0
 
+
 def inv_weight_limit(item_id):
     weight = 0
     print("Checking inventory weight.")
@@ -20,9 +21,11 @@ def inv_weight_limit(item_id):
     else:
         return False
 
+
 def fear_level():
     if fear > 35:
         game.won = False
+
 
 def inv_weight():
     weight = 0

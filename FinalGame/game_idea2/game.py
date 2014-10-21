@@ -144,6 +144,7 @@ def execute_go(direction):
     """
     if direction in player.current_room["exits"]:
         player.current_room = move(player.current_room["exits"],direction)
+        player.fear = player.fear + 1
     else:
         print("You cannot go there.")
 
@@ -159,6 +160,7 @@ def execute_take(item_id):
         if inv_weight_limit(item_id):
             inventory.append(items[item_id])
             player.current_room["items"].remove(items[item_id])
+            player.fear = player.fear + 1
         else:
             print("You cannot pick up this item, you are carrying too much")
             input("Hit enter.")
@@ -172,7 +174,7 @@ def execute_drop(item_id):
     if is_item_in_inventory(item_id,player.inventory):
         player.current_room["items"].append(items[item_id])
         inventory.remove(items[item_id])
-    pass
+        player.fear = player.fear + 1
 
 def execute_examine(item_id):
     """This function takes a chosen item and, given that it is in the player's
@@ -236,7 +238,7 @@ def menu(exits, room_items, inv_items):
     """This function, given a dictionary of possible exits from a room, and a list
     of items found in the room and carried by the player, prints the menu of
     actions using print_menu() function. It then prompts the player to type an
-    action. The players's input is normalised using the normalise_input()
+    action. The player's input is normalised using the normalise_input()
     function before being returned."""
 
     # Display menu
@@ -253,7 +255,7 @@ def menu(exits, room_items, inv_items):
 
 def move(exits, direction):
     """This function returns the room into which the player will move if, from a
-    dictionary "exits" of avaiable exits, they choose to move towards the exit
+    dictionary "exits" of available exits, they choose to move towards the exit
     with the name given by "direction". For example:"""
     
     # Next room to go to
@@ -308,7 +310,6 @@ def main():
             mission2()
             mission3()
             miss_com()
-            player.fear = player.fear + 1
             player.fear_level()
         elif game.won == True:
             print("")

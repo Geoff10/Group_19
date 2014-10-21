@@ -12,10 +12,10 @@ item_fuse = {
 item_key = {
     "id": "key",
 
-    "name": "key",
+    "name": "the key",
 
     "description":
-    "A beaten key, i wonder if it could open a locked door",
+    "A beaten key, I wonder if it could open a locked door",
 
     "weight": "1"
 }
@@ -23,10 +23,10 @@ item_key = {
 item_pick = {
     "id": "pick",
 
-    "name": "pick",
+    "name": "the pick",
 
     "description":
-    "Looks like a pick, this could be use to open locked doors",
+    "Looks like a pick, I could use this to open locked doors",
 
     "weight": "3"
 }
@@ -34,10 +34,10 @@ item_pick = {
 item_money = {
     "id": "money",
 
-    "name": "money",
+    "name": "the money",
 
     "description":
-    """ Seems kinda useless for this place, maybe i should drop it. """,
+    """ Seems kinda useless for this place, maybe I should drop it. """,
 
     "weight": "1"
 }
@@ -45,11 +45,11 @@ item_money = {
 item_torch = {
     "id": "torch",
 
-    "name": "flash light",
+    "name": "the torch",
 
     "description":
-    """Nice plan, pick up the flash light! Shame the bulb is smashed,
-it's pretty useless...""",
+    """Nice plan, I've the torch! Shame the bulb is smashed, it's pretty
+useless...""",
 
     "weight": "2"
 }
@@ -57,10 +57,10 @@ it's pretty useless...""",
 item_glass = {
     "id": "glass",
 
-    "name": "wine glass",
+    "name": "the wine glass",
 
     "description":
-    """Upon further inspection there is a small hole in the side of the
+    """Upon further inspection I find a small hole in the side of the
 wine glass. It will be pretty useless, especially for drinking from.""",
 
     "weight": "2"
@@ -69,10 +69,10 @@ wine glass. It will be pretty useless, especially for drinking from.""",
 item_phone = {
     "id": "phone",
 
-    "name": "phone",
+    "name": "your phone",
 
     "description":
-    """ A phone without signal, is there a point on holding onto this. """,
+    """ A phone without signal, is there a point in me holding onto this. """,
 
     "weight": "2"
 }
