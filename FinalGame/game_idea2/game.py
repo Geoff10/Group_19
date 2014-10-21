@@ -282,7 +282,9 @@ without signal and some cash.
     print("------------------------------------------------------------")
     print("")
     print("")
+    print("---------------------THE HAUNTED HOUSE----------------------")
     print("")
+    print("THE STORY SO FAR...")
     print(story["description"])
 
 
