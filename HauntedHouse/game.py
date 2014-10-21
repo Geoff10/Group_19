@@ -297,7 +297,7 @@ you cannot seem to open it.
 
 Your mission now is to try to find the key for escaping the
 house.
-Remember the fear level increases, if it reaches 25 you will get
+Remember the fear level increases, if it reaches 35 you will get
 terrified and be trapped forever. You currently have a phone
 without signal and some cash.
  """}
