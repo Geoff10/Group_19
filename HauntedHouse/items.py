@@ -6,7 +6,7 @@ item_fuse = {
     "description":
     """A small fuse, could help me turn the lights on in this place.""",
 
-    "weight": "4"
+    "weight": "2"
 }
 
 item_map = {
