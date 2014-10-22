@@ -17,7 +17,7 @@ def mission1():
             garage["description"] = """The lights are now on, you can now see where you are going around
 the house. I wonder if there was anything in the freezer."""
             freezer["items"].append(items["pick"])
-            freezer["description"] = """Walking through the broken door, hanging of its hinges.
+            freezer["description"] = """Walking through the broken door, hanging off its hinges.
 You enter into the freezer, I can see something on the floor, I wonder if it could open the safe. """
             mission["mission_1"] = "complete"
 
