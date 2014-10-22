@@ -233,27 +233,6 @@ def execute_command(command):
     else:
         print("This makes no sense.")
 
-def print_map(inv_items):
-    """This function checks if you currently have the map in the players inventory. If its true you can then have a look at it """       
-    for i in player["inventory"]:
-        if "map"== i["id"]:
-            print("-------------------------------------------------------------------------------------")
-            print("")
-            print("                                 [     BACK        ]")
-            print("                                                    <-------------------->[ GARAGE  ]")
-            print("                                 [     YARD        ]")                                  
-            print("                                        /")
-            print("                                        /")
-            print("                                        /")
-            print("                                        /")
-            print(" [ DINING ROOM ]<--------------->[    KITCHEN      ]<-------------------->[ FREEZER ]")
-            print("          /                               /")
-            print("          \                               /")
-            print("          /                               /")
-            print("          \                               /")
-            print("     [ LOUNGE ]<------------------[  ENTRANCE HALL  ]")
-            print("")
-            print("------------------------------------------------------------------------------------")
 
 
 def menu(exits, room_items, inv_items):
